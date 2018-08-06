@@ -1,0 +1,27 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+.item-container {
+  margin-left: 60px;
+}
+.pager-container {
+  display: flex;
+  justify-content: center;
+}
+.pager-container .page-number {
+  cursor: pointer;
+}
+.tab-container {
+  display: flex;
+}
+.tab-container .tab-item {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  cursor: pointer;
+}

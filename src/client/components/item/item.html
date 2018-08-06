@@ -1,0 +1,7 @@
+<div class="item-container">
+    <div ng-repeat="item in vm.listModel.list">
+        <input type="checkbox" name="itemCheckBox" ng-click="vm.check(item)" ng-model="item.isSelected">
+        <span>{{item.id}}</span>
+    </div>
+
+</div>
