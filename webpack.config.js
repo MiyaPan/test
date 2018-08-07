@@ -57,11 +57,13 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("styles.css"),
+        new ExtractTextPlugin({
+            filename: "styles.css"
+        }),
         new HtmlWebpackPlugin({
             template: 'src/client/pages/index.html',
             filename: 'index.html',
-            inject: false
+            inject: 'body'
         })
     ]
 };
