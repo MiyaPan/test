@@ -6,6 +6,7 @@ AppCtrl.$inject = ['$scope'];
 function AppCtrl($scope) {
     $scope.listModel = new ListModel();
     $scope.tab = null;
+    $scope.isShowSelectedArr = false;
 
     $scope.reload = () => {
         $scope.listModel.tab = $scope.tab;
@@ -20,6 +21,10 @@ function AppCtrl($scope) {
         $scope.listModel.list.map((item) => {
             item.isSelected = $scope.listModel.isSelectedAll;
         })
+    };
+
+    $scope.getSelected = () => {
+        $scope.isShowSelectedArr = true;
     };
 
     $scope.$watch('tab', () => {

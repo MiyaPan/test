@@ -48,7 +48,8 @@ export default class ListModel {
     }
 
     public getSelectedArr () {
-        return this.list.filter((item) => item.isSelected === true);
+        let selectedArr = this.list.filter((item) => item.isSelected === true);
+        return selectedArr.map((item) => item.id)
     }
 
     public isFirstPage () {

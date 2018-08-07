@@ -8,8 +8,7 @@
     </head>
     <body ng-cloak ng-controller="AppCtrl">
         <div class="buttons">
-            <button id="getSelectedArr" ng-click="listModel.getSelectedArr()">获取选中项</button>
-            <span>: {{listModel.getSelectedArr()}}</span>
+            <button id="getSelectedArr" ng-click="getSelected()">获取选中项</button>
             <button id="refresh" ng-click="reload()">刷新</button>
         </div>
 
@@ -20,6 +19,8 @@
         <item list-model="listModel"></item>
 
         <pager list-model="listModel" reload="reload()"></pager>
+
+        <div ng-if="isShowSelectedArr"> <span>选择元素: {{listModel.getSelectedArr()}}</span></div>
     </body>
     <script src="../../../dist/js/bundle.js"></script>
 </html>

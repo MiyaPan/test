@@ -1,7 +1,7 @@
 <div class="pager-container">
     <div ng-if="!vm.listModel.isFirstPage()">...</div>
-    <div ng-click="vm.reload()" ng-if="!vm.listModel.isFirstPage()" class="page-number">上一页</div>
+    <div ng-click="vm.onPageChange(true)" ng-if="!vm.listModel.isFirstPage()" class="page-number">上一页</div>
     <div>{{vm.listModel.pageNum}}</div>
-    <div ng-click="vm.reload()" ng-if="!vm.listModel.isLastPage()" class="page-number">下一页</div>
+    <div ng-click="vm.onPageChange(false)" ng-if="!vm.listModel.isLastPage()" class="page-number">下一页</div>
     <div ng-if="!vm.listModel.isLastPage()">...</div>
 </div>
